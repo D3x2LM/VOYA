@@ -50,7 +50,7 @@ class LoginForm extends StatelessWidget {
           onPressed: () {},
           style: ElevatedButton.styleFrom(
             padding: const EdgeInsets.symmetric(vertical: 16),
-            backgroundColor: Colors.blue,
+            backgroundColor: Colors.green,
           ),
           child: const Text(
             'Ingresar',
