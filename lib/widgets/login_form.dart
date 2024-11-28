@@ -8,63 +8,59 @@ class LoginForm extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.stretch,
       children: [
-        // Campo de Email
-        const Text('Email:', style: TextStyle(fontSize: 16)),
-        const SizedBox(height: 8),
-        TextField(
-          decoration: InputDecoration(
-            hintText: 'Email',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
+        TextFormField(
+          decoration: const InputDecoration(
+            labelText: 'Email',
+            border: OutlineInputBorder(),
+            filled: true,
+            fillColor: Colors.white,
           ),
         ),
-        const SizedBox(height: 20),
-
-        // Campo de Contraseña
-        const Text('Password:', style: TextStyle(fontSize: 16)),
-        const SizedBox(height: 8),
-        TextField(
+        const SizedBox(height: 16),
+        TextFormField(
           obscureText: true,
-          decoration: InputDecoration(
-            hintText: 'Password',
-            border: OutlineInputBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
+          decoration: const InputDecoration(
+            labelText: 'Password',
+            border: OutlineInputBorder(),
+            filled: true,
+            fillColor: Colors.white,
           ),
         ),
-
-        // Olvidé mi contraseña
-        const TextButton(
-          onPressed: null,
-          child: Text('Olvidé mi contraseña'),
-        ),
-
-        // Checkbox recordar contraseña
-        const Row(
+        const SizedBox(height: 8),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            Checkbox(value: false, onChanged: null),
-            Text('Recordar Contraseña'),
+            TextButton(
+              onPressed: () {},
+              child: const Text('Olvidé mi contraseña'),
+            ),
+            Row(
+              children: [
+                Checkbox(
+                  value: false,
+                  onChanged: (value) {},
+                ),
+                const Text('Recordar Contraseña'),
+              ],
+            ),
           ],
         ),
-
-        // Botón de ingreso
+        const SizedBox(height: 16),
         ElevatedButton(
-          onPressed: null,
+          onPressed: () {},
           style: ElevatedButton.styleFrom(
-            padding: const EdgeInsets.symmetric(vertical: 15),
-            shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.circular(8),
-            ),
+            padding: const EdgeInsets.symmetric(vertical: 16),
+            backgroundColor: Colors.blue,
           ),
-          child: const Text('Ingresar', style: TextStyle(fontSize: 16)),
+          child: const Text(
+            'Ingresar',
+            style: TextStyle(color: Colors.white),
+          ),
         ),
-        const SizedBox(height: 15),
-
-        // Botón crear cuenta
-        const TextButton(
-          onPressed: null,
-          child: Text('Crear cuenta'),
+        const SizedBox(height: 16),
+        TextButton(
+          onPressed: () {},
+          child: const Text('Crear cuenta'),
         ),
       ],
     );

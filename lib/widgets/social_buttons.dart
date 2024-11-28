@@ -9,15 +9,15 @@ class SocialButtons extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         IconButton(
-          icon: const Icon(Icons.facebook, color: Colors.blue),
+          icon: const Icon(Icons.facebook),
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.camera_alt, color: Colors.pink),
+          icon: const Icon(Icons.camera_alt),
           onPressed: () {},
         ),
         IconButton(
-          icon: const Icon(Icons.flutter_dash, color: Colors.blue),
+          icon: const Icon(Icons.favorite),
           onPressed: () {},
         ),
       ],
