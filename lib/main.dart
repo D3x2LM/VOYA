@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:voya_app/pages/home_screen.dart';
 import 'package:voya_app/pages/login_screen.dart';
 
 void main() {
@@ -10,9 +11,16 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: LoginScreen(),
+    return MaterialApp(
+      title: 'VOYA App',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
+      ),
+      initialRoute: '/',
+      routes: {
+        '/': (context) => const LoginScreen(),
+        '/home': (context) => const HomeScreen(),
+      },
     );
   }
 }
